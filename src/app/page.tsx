@@ -1,9 +1,11 @@
 "use client";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import "./globals.css";
+import "../styles/globals.css";
 
 export default function Home() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -12,12 +14,24 @@ export default function Home() {
         }
       });
     });
-
     const hiddenElements = document.querySelectorAll(".hidden-section");
     hiddenElements.forEach((el) => observer.observe(el));
 
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        // Atur posisi scroll yang diinginkan
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    // Menambahkan event listener untuk scroll
+    window.addEventListener("scroll", handleScroll);
+
     return () => {
       hiddenElements.forEach((el) => observer.unobserve(el));
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -43,7 +57,11 @@ export default function Home() {
             Full Stack Developer | UI/UX Designer | Software Engineer
           </motion.p>
         </div>
-        <div className="absolute bottom-10 animate-bounce">
+        <div
+          className={`absolute bottom-10 animate-bounce ${
+            isScrolled ? "opacity-0" : "opacity-100"
+          } transition-opacity duration-300`}
+        >
           <span className="text-gray-400">Scroll Down</span>
         </div>
       </section>
