@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "../styles/globals.css";
+import { projects } from "../data/projectsData";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -68,8 +69,8 @@ export default function Home() {
 
       {/* About Section */}
       <section className="min-h-screen py-20">
-        <div className="hidden-section max-w-4xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-8">About Me</h2>
+        <div className="hidden-section max-w-6xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-12">About Me</h2>
           <p className="text-gray-400 mb-6">
             Saya adalah seorang Full Stack Developer dengan pengalaman lebih
             dari 5 tahun dalam pengembangan web modern. Passionate dalam
@@ -78,15 +79,21 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
             <div className="bg-gray-800 p-6 rounded-lg">
               <h3 className="text-xl font-bold mb-2">Frontend</h3>
-              <p className="text-gray-400">React, Next.js, Tailwind CSS</p>
+              <p className="text-gray-400">
+                Vue js, React, Next.js, Nuxt, Tailwind CSS
+              </p>
             </div>
             <div className="bg-gray-800 p-6 rounded-lg">
               <h3 className="text-xl font-bold mb-2">Backend</h3>
-              <p className="text-gray-400">Node.js, Express, PostgreSQL</p>
+              <p className="text-gray-400">Node.js, Express</p>
             </div>
             <div className="bg-gray-800 p-6 rounded-lg">
               <h3 className="text-xl font-bold mb-2">Tools</h3>
               <p className="text-gray-400">Git, Docker, AWS</p>
+            </div>
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h3 className="text-xl font-bold mb-2">Software</h3>
+              <p className="text-gray-400">Figma, Adobe Premiere Pro</p>
             </div>
           </div>
         </div>
@@ -97,25 +104,38 @@ export default function Home() {
         <div className="hidden-section max-w-6xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold mb-12">Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[1, 2, 3, 4].map((project) => (
+            {projects.map((project) => (
               <div
-                key={project}
+                key={project.id}
                 className="bg-gray-800 rounded-lg overflow-hidden project-card"
               >
-                <div className="h-48 bg-gray-700"></div>
+                <div className="h-48 bg-gray-700">
+                  <img
+                    src={project.image}
+                    alt={`Gambar ${project.title}`}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">Project {project}</h3>
-                  <p className="text-gray-400 mb-4">
-                    Deskripsi singkat tentang project dan teknologi yang
-                    digunakan.
+                  <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                  <p className="text-gray-400 mb-4 text-justify">
+                    {project.description}
                   </p>
                   <div className="flex gap-2">
-                    <button className="px-4 py-2 bg-blue-600 rounded hover:bg-blue-700">
-                      Demo
-                    </button>
-                    <button className="px-4 py-2 bg-gray-700 rounded hover:bg-gray-600">
-                      Code
-                    </button>
+                    <a
+                      href={project.previewLink}
+                      className="px-4 py-2 bg-blue-600 rounded hover:bg-blue-700"
+                    >
+                      View
+                    </a>
+                    <a
+                      href={project.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 bg-gray-700 rounded hover:bg-gray-600"
+                    >
+                      Github Link
+                    </a>
                   </div>
                 </div>
               </div>
