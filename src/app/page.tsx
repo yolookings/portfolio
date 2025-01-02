@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "../styles/globals.css";
 import { projects } from "../data/projectsData";
+import RotatingIcon from "../data/icon";
+import ContactForm from "@/components/ContactForm";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -20,14 +22,12 @@ export default function Home() {
 
     const handleScroll = () => {
       if (window.scrollY > 50) {
-        // Atur posisi scroll yang diinginkan
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
       }
     };
 
-    // Menambahkan event listener untuk scroll
     window.addEventListener("scroll", handleScroll);
 
     return () => {
@@ -57,6 +57,18 @@ export default function Home() {
           >
             Full Stack Developer | UI/UX Designer | Software Engineer
           </motion.p>
+          <div>
+            <RotatingIcon
+              className="top-1/3 left-0"
+              size="w-16 h-16 sm:w-18 sm:h-18 md:w-28 md:h-28 lg:w-40 lg:h-40"
+              direction="clockwise"
+            />
+            <RotatingIcon
+              className="top-1/5 left-0"
+              size="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20"
+              direction="counterclockwise"
+            />
+          </div>
         </div>
         <div
           className={`absolute bottom-10 animate-bounce ${
@@ -70,28 +82,29 @@ export default function Home() {
       {/* About Section */}
       <section className="min-h-screen py-20">
         <div className="hidden-section max-w-6xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-12">About Me</h2>
-          <p className="text-gray-400 mb-6">
-            Saya adalah seorang Full Stack Developer dengan pengalaman lebih
-            dari 5 tahun dalam pengembangan web modern. Passionate dalam
-            menciptakan solusi digital yang elegan dan efisien.
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6">About Me</h2>
+          <p className="text-gray-400 mb-6 text-justify">
+            I am an Information Technology major with a deep interest in web
+            development and user interface design (UI/UX). With more than a year
+            of experience in designing and developing digital solutions, I have
+            focused on creating interactive and responsive websites.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-            <div className="bg-gray-800 p-6 rounded-lg">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+            <div className="bg-gray-800 p-6 rounded-lg transition-transform transform hover:scale-105 hover:shadow-lg">
               <h3 className="text-xl font-bold mb-2">Frontend</h3>
               <p className="text-gray-400">
                 Vue js, React, Next.js, Nuxt, Tailwind CSS
               </p>
             </div>
-            <div className="bg-gray-800 p-6 rounded-lg">
+            <div className="bg-gray-800 p-6 rounded-lg transition-transform transform hover:scale-105 hover:shadow-lg">
               <h3 className="text-xl font-bold mb-2">Backend</h3>
               <p className="text-gray-400">Node.js, Express</p>
             </div>
-            <div className="bg-gray-800 p-6 rounded-lg">
+            <div className="bg-gray-800 p-6 rounded-lg transition-transform transform hover:scale-105 hover:shadow-lg">
               <h3 className="text-xl font-bold mb-2">Tools</h3>
               <p className="text-gray-400">Git, Docker, AWS</p>
             </div>
-            <div className="bg-gray-800 p-6 rounded-lg">
+            <div className="bg-gray-800 p-6 rounded-lg transition-transform transform hover:scale-105 hover:shadow-lg">
               <h3 className="text-xl font-bold mb-2">Software</h3>
               <p className="text-gray-400">Figma, Adobe Premiere Pro</p>
             </div>
@@ -129,12 +142,12 @@ export default function Home() {
                       View
                     </a>
                     <a
-                      href={project.githubLink}
+                      href={project.projectLink}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="px-4 py-2 bg-gray-700 rounded hover:bg-gray-600"
                     >
-                      Github Link
+                      ProjectLink
                     </a>
                   </div>
                 </div>
@@ -149,28 +162,18 @@ export default function Home() {
         <div className="hidden-section max-w-4xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-8">Get In Touch</h2>
           <p className="text-gray-400 mb-8">
-            Tertarik untuk berkolaborasi? Jangan ragu untuk menghubungi saya.
+            Interested in collaborating? Feel free to contact me.
           </p>
-          <form className="max-w-md mx-auto">
-            <input
-              type="text"
-              placeholder="Your Name"
-              className="w-full mb-4 p-3 bg-gray-800 rounded"
-            />
-            <input
-              type="email"
-              placeholder="Your Email"
-              className="w-full mb-4 p-3 bg-gray-800 rounded"
-            />
-            <textarea
-              placeholder="Your Message"
-              rows={5}
-              className="w-full mb-4 p-3 bg-gray-800 rounded"
-            ></textarea>
-            <button className="w-full py-3 bg-blue-600 rounded hover:bg-blue-700">
-              Send Message
-            </button>
-          </form>
+          <div className="container mx-auto mt-20">
+            <h1 className="text-2xl font-bold mb-6 text-center"></h1>
+            <ContactForm />
+          </div>
+          {/* Centered Infinite Typing Animation */}
+          <div className="mt-16 flex justify-center">
+            <p className="text-lg text-gray-400 animate-typing">
+              Thanks for your visit! 🚀
+            </p>
+          </div>
         </div>
       </section>
     </main>

@@ -78,3 +78,25 @@ textarea:focus {
   outline: none;
   box-shadow: 0 0 0 2px #3b82f6;
 }
+
+@keyframes typing {
+  0%,
+  100% {
+    width: 0;
+  }
+  50%,
+  60% {
+    /* menahan teks penuh selama 10% dari total durasi */
+    width: 100%;
+  }
+}
+
+.animate-typing {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto; /* untuk memastikan teks di tengah */
+  border-right: 2px solid; /* menambah efek cursor */
+  width: 0; /* mulai dengan width 0 */
+  animation: typing 7s steps(50) infinite;
+  max-width: fit-content; /* container hanya selebar teks */
+}

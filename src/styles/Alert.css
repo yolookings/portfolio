@@ -1,0 +1,59 @@
+/* Alert.css */
+.custom-alert {
+  position: fixed;
+  top: 110px; /* Place the alert at the bottom with 20px spacing */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px; /* Adjust padding for a more minimal look */
+  border-radius: 5px;
+  background-color: #4caf50; /* Assuming success type for now, change based on type */
+  color: white;
+  font-size: 14px; /* Smaller font size for a minimal look */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 250px; /* Adjust minimum width as needed */
+  z-index: 1000;
+  opacity: 1; /* Remove animation for a simpler look */
+}
+
+@keyframes slideIn {
+  0% {
+    top: -100px; /* Mulai dari luar layar */
+    opacity: 0;
+  }
+  100% {
+    top: 10px; /* Posisi akhir sedikit di bawah bagian atas halaman */
+    opacity: 1;
+  }
+}
+
+.custom-alert.success {
+  background-color: #4caf50;
+  color: white;
+}
+
+.custom-alert.info {
+  background-color: #2196f3;
+  color: white;
+}
+
+.custom-alert.warning {
+  background-color: #ff9800;
+  color: white;
+}
+
+.alert-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
