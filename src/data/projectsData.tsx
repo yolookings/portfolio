@@ -8,6 +8,12 @@ export const projects = [
     previewLink: "#",
     projectLink:
       "https://www.figma.com/design/rOf1arOl79LgGzuB7irhob/ARA-6.0---Website-Design?node-id=1886-36079&t=lOy8I3Hd8l0042yj-1",
+    technologies: ["UIX", "Web Development", "Figma"],
+    features: [
+      "Feature 1: Responsive design with mobile-first approach",
+      "Feature 2: Real-time data synchronization",
+      "Feature 3: Advanced search functionality",
+    ],
   },
   {
     id: 2,
@@ -18,6 +24,12 @@ export const projects = [
     previewLink: "#",
     projectLink:
       "https://www.figma.com/design/BUYd4Jk2fz2sm4wkjUsmzp/%F0%9F%96%8C%EF%B8%8F-Futurest-2025----Website-Design?node-id=1261-403&t=qntOy5h1nYr1XHTx-1",
+    technologies: ["UIX", "Web Development", "Figma"],
+    features: [
+      "Feature 1: Responsive design with mobile-first approach",
+      "Feature 2: Real-time data synchronization",
+      "Feature 3: Advanced search functionality",
+    ],
   },
   {
     id: 3,
@@ -28,6 +40,12 @@ export const projects = [
     previewLink: "#",
     projectLink:
       "https://www.figma.com/design/3omlpTh4XknPmsnOkK1tGS/GSM-BANYU-2024?node-id=1-2&t=K2a8skPNo30ptkCe-1",
+    technologies: ["UIX", "Creative Design", "Figma", "Adobe Premiere Pro"],
+    features: [
+      "Feature 1: Handling social media to enhance team branding",
+      "Feature 2: Creative design to support research team branding",
+      "Feature 3: Creating content for social media publication",
+    ],
   },
   {
     id: 4,
