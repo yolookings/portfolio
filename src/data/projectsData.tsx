@@ -49,22 +49,34 @@ export const projects = [
   },
   {
     id: 4,
-    title: "Garpit 2024",
-    description:
-      "GARPIT is a gaming event organized by the domestic department of the information technology student association, which collaborates with the information media department in running the event.",
-    image: "../img/garpit.png",
-    previewLink: "#",
-    projectLink:
-      "https://www.figma.com/design/kAtVu9ZiBPtG6Cf6Jmxu4p/GarpIT-24?node-id=0-1&t=IHvvThdXQugpVBFA-1",
-  },
-  {
-    id: 5,
     title: "Magang Himpunan - Departemen Medfo 2024",
     description:
       "I am registered as an intern in the information media department, in charge of managing the association's social media and all kinds of information in the media.",
     image: "../img/magang-himpunan.png",
     previewLink: "#",
-    projectLink: "#",
+    projectLink: "https://hmitits.carrd.co/",
+    technologies: ["Creative Design", "Figma", "Adobe Premiere Pro"],
+    features: [
+      "Feature 1: Designing articles for social media feeds to enhance organizational branding",
+      "Feature 2: Planning and creating content for Instagram and TikTok publication",
+      "Feature 3: Supporting event documentation to showcase organizational activities",
+    ],
+  },
+  {
+    id: 5,
+    title: "Garpit 2024",
+    description:
+      "GARPIT is a gaming event organized by the internal affair department of the information technology student association, which collaborates with the information media department in running the event.",
+    image: "../img/garpit.png",
+    previewLink: "#",
+    projectLink:
+      "https://www.figma.com/design/kAtVu9ZiBPtG6Cf6Jmxu4p/GarpIT-24?node-id=0-1&t=IHvvThdXQugpVBFA-1",
+    technologies: ["Creative Design", "Figma", "Adobe Premiere Pro"],
+    features: [
+      "Feature 1: Acting as a liaison between the media and internal affairs departments to ensure seamless communication.",
+      "Feature 2: Documenting the event comprehensively during the competition.",
+      "Feature 3: Designing all necessary materials and equipment for the event.",
+    ],
   },
   {
     id: 6,
@@ -74,6 +86,19 @@ export const projects = [
     image: "../img/bms.png",
     previewLink: "#",
     projectLink: "https://github.com/yolookings/bms-project.git",
+    technologies: [
+      "Creative Design",
+      "Figma",
+      "Web Development",
+      "Copywriting",
+      "Photography",
+      "Videography",
+    ],
+    features: [
+      "Feature 1: Providing training on design, photography, and videography to enhance media production skills.",
+      "Feature 2: Teaching copywriting techniques to improve content creation and messaging.",
+      "Feature 3: Introducing web development fundamentals to support digital presence and innovation.",
+    ],
   },
   {
     id: 7,
@@ -83,6 +108,19 @@ export const projects = [
     image: "../img/greenoasis.png",
     previewLink: "#",
     projectLink: "https://github.com/yolookings/pweb-js-P18-2024.git",
+    technologies: [
+      "Web Development",
+      "Typescript",
+      "Vue JS",
+      "Tailwind CSS",
+      "MonoDB",
+      "Express JS",
+    ],
+    features: [
+      "Feature 1: Supporting the sales of ornamental plants to promote the growth of local SMEs.",
+      "Feature 2: Providing an online sales platform to enhance accessibility and convenience for customers.",
+      "Feature 3: Offering a web-based service to advance technology adoption in the ornamental plant industry.",
+    ],
   },
   {
     id: 8,
@@ -92,5 +130,18 @@ export const projects = [
     image: "../img/kos.png",
     previewLink: "#",
     projectLink: "https://github.com/yolookings/pweb-fp-P18-2024.git",
+    technologies: [
+      "Web Development",
+      "Typescript",
+      "Nuxt JS",
+      "Tailwind CSS",
+      "MongoDB",
+      "Express JS",
+    ],
+    features: [
+      "Feature 1: Supporting the sales of ornamental plants to promote the growth of local SMEs.",
+      "Feature 2: Providing an online sales platform to enhance accessibility and convenience for customers.",
+      "Feature 3: Offering a web-based service to advance technology adoption in the ornamental plant industry.",
+    ],
   },
 ];
