@@ -28,6 +28,10 @@ export default function AboutSection() {
             <h3 className="text-xl font-bold mb-2">Software</h3>
             <p className="text-gray-400">Figma, Adobe Premiere Pro</p>
           </div>
+          <div className="bg-gray-800 p-6 rounded-lg transition-transform transform hover:scale-105 hover:shadow-lg">
+            <h3 className="text-xl font-bold mb-2">Mobile Development</h3>
+            <p className="text-gray-400">Swift</p>
+          </div>
         </div>
       </div>
     </section>
