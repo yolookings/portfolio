@@ -1,9 +1,14 @@
 export default function AboutSection() {
   return (
-    <section className="min-h-screen py-20">
+    <section
+      id="about"
+      className="min-h-screen py-20 bg-white dark:bg-gray-900"
+    >
       <div className="hidden-section max-w-6xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-bold mb-6">About Me</h2>
-        <p className="text-gray-400 mb-6 text-justify">
+        <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
+          About Me
+        </h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-6 text-justify">
           I am an Information Technology major with a deep interest in web
           development and user interface design (UI/UX). With more than a year
           of experience in designing and developing digital solutions, I have

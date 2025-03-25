@@ -1,7 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
 import "../styles/globals.css";
-import NavBar from "@/components/navbar";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ProjectsSection from "@/components/ProjectsSection";
@@ -38,8 +37,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white px-6 sm:px-8 md:px-12">
-      <NavBar />
+    <main className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
       <HeroSection isScrolled={isScrolled} />
       <AboutSection />
       <ProjectsSection />

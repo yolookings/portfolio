@@ -2,7 +2,7 @@ import ContactForm from "./ContactForm";
 
 export default function ContactSection() {
   return (
-    <section className="min-h-screen py-20">
+    <section id="support" className="min-h-screen py-20">
       <div className="hidden-section max-w-4xl mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl font-bold mb-8">Get In Touch</h2>
         <p className="text-gray-400 mb-8">
