@@ -1,7 +1,7 @@
 export const projects = [
   {
     id: 1,
-    title: "UIX ARA 6.0 - Web Development",
+    title: "ARA 6.0 - UIX Web Development",
     description:
       "ARA is an event held by my major, information technology ITS. as an ui/ux, my task is to form a web design that creates a good interface design and a memorable user experience for people who want to access it.",
     image: "../img/ara.png",
@@ -17,7 +17,7 @@ export const projects = [
   },
   {
     id: 2,
-    title: "UIX Futurest 2025 - Web Development",
+    title: "Futurest 2025 by SRE ITS - UIX Web Development",
     description:
       "Futurest is an event organized by SRE ITS which organizes various competitions that support the creation of a transition to renewable energy, as a UI / UX Designer staff whose job is to design user interface designs on the futurest web.",
     image: "../img/futurest.png",
@@ -33,6 +33,22 @@ export const projects = [
   },
   {
     id: 3,
+    title: "AMPP SC ITS 2025 - UIX Web Development",
+    description:
+      "AMPP ITS is student branch of AMPP international association that focuses on material protection and performance. AMPP ITS SC was established to provide a platform for students to develop knowledge and skills in the field of material protection, one of which is in the field of web development ",
+    image: "../img/.png",
+    previewLink: "#",
+    projectLink:
+      "https://www.figma.com/design/BUYd4Jk2fz2sm4wkjUsmzp/%F0%9F%96%8C%EF%B8%8F-Futurest-2025----Website-Design?node-id=1261-403&t=qntOy5h1nYr1XHTx-1",
+    technologies: ["UIX", "Web Development", "Figma"],
+    features: [
+      "Feature 1: Responsive design with mobile-first approach",
+      "Feature 2: Real-time data synchronization",
+      "Feature 3: Advanced search functionality",
+    ],
+  },
+  {
+    id: 4,
     title: "Banyubramanta ITS Robotic Team - Creative Design",
     description:
       "I collaborate with the team to create compelling brand strategies and visual content that enhance our team’s presence in both national and international competitions.",
@@ -48,7 +64,7 @@ export const projects = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: "Magang Himpunan - Departemen Medfo 2024",
     description:
       "I am registered as an intern in the information media department, in charge of managing the association's social media and all kinds of information in the media.",
@@ -63,7 +79,22 @@ export const projects = [
     ],
   },
   {
-    id: 5,
+    id: 6,
+    title: "Himpunan Mahasiswa - Departemen Medfo 2025",
+    description:
+      "After joining the association, I now serve as the Secretary of the Media and Information Department for 2025, responsible for managing the organization's social media and overseeing all media-related communications.",
+    image: "../img/hmit.png",
+    previewLink: "#",
+    projectLink: "https://hmitits.carrd.co/",
+    technologies: ["Creative Design", "Figma", "Adobe Premiere Pro"],
+    features: [
+      "Feature 1: create letters for departmental purposes",
+      "Feature 2: Designing articles for social media feeds to enhance organizational branding",
+      "Feature 3: Planning and creating content for Instagram and TikTok publication",
+    ],
+  },
+  {
+    id: 7,
     title: "Garpit 2024",
     description:
       "GARPIT is a gaming event organized by the internal affair department of the information technology student association, which collaborates with the information media department in running the event.",
@@ -79,7 +110,7 @@ export const projects = [
     ],
   },
   {
-    id: 6,
+    id: 8,
     title: "Basic Media Schooling - Web Project",
     description:
       "BMS is an event organized by the information media department in an association, which contains subject matter in the form of design, photography and videography, copywriting, and web development.",
@@ -101,7 +132,7 @@ export const projects = [
     ],
   },
   {
-    id: 7,
+    id: 9,
     title: "GreenOasis - Website for SMEs",
     description:
       "GreenOasis is an ornamental plant selling website designed to develop micro, small, and medium enterprises (MSMEs) in the community.",
@@ -123,7 +154,7 @@ export const projects = [
     ],
   },
   {
-    id: 8,
+    id: 10,
     title: "Boarding House Management Website",
     description:
       "is a website used to manage a boarding house related to services and also all information about the boarding house.",
