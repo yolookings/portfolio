@@ -101,3 +101,11 @@ textarea:focus {
   animation: typing 7s steps(50) infinite;
   max-width: fit-content; /* container hanya selebar teks */
 }
+
+/* Untuk mobile */
+@media (max-width: 767px) {
+  .mobile-padding {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

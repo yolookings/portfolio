@@ -8,7 +8,10 @@ interface HeroSectionProps {
 
 export default function HeroSection({ isScrolled }: HeroSectionProps) {
   return (
-    <section className="h-screen flex items-center justify-center relative">
+    <section
+      id="home"
+      className="h-screen flex items-center justify-center relative"
+    >
       <div className="text-center">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}

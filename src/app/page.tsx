@@ -1,6 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
 import "../styles/globals.css";
+import NavBar from "@/components/navbar";
+import Footer from "@/components/footer";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ProjectsSection from "@/components/ProjectsSection";
@@ -38,10 +40,12 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+      <NavBar />
       <HeroSection isScrolled={isScrolled} />
       <AboutSection />
       <ProjectsSection />
       <ContactSection />
+      <Footer />
     </main>
   );
 }
