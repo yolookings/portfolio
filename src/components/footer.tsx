@@ -41,9 +41,17 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo and Description */}
           <div className="space-y-4">
-            <span className="text-2xl font-extrabold bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">
-              MAW
-            </span>
+            <a href="/" className="flex items-center space-x-3">
+              <img
+                src="../img/yolooaster.png"
+                alt="yolooaster"
+                className="h-12 w-auto transition-all duration-300 hover:scale-105"
+              />
+              <span className="text-2xl font-extrabold bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">
+                yolooaster
+              </span>
+            </a>
+
             <p className="text-gray-600 dark:text-gray-400 mt-2">
               Crafting digital experiences and showing portofolio with passion
               and precision.

@@ -179,7 +179,7 @@ const ContactForm = () => {
           value={formData.name}
           onChange={handleChange}
           placeholder="Your Name"
-          className="w-full mb-4 p-3 bg-gray-800 rounded"
+          className="w-full mb-4 p-3 bg-gray-200 dark:bg-gray-800 rounded"
         />
         <input
           type="email"
@@ -187,7 +187,7 @@ const ContactForm = () => {
           value={formData.email}
           onChange={handleChange}
           placeholder="Your Email"
-          className="w-full mb-4 p-3 bg-gray-800 rounded"
+          className="w-full mb-4 p-3 bg-gray-200 dark:bg-gray-800 rounded"
         />
         <textarea
           name="message"
@@ -195,11 +195,11 @@ const ContactForm = () => {
           onChange={handleChange}
           placeholder="Your Message"
           rows={5}
-          className="w-full mb-4 p-3 bg-gray-800 rounded"
+          className="w-full mb-4 p-3 bg-gray-200 dark:bg-gray-800 rounded"
         ></textarea>
         <button
           type="submit"
-          className="w-full py-3 bg-blue-600 rounded hover:bg-blue-700"
+          className="w-full py-3 bg-blue-600 rounded hover:bg-blue-700 text-white"
         >
           Send Message
         </button>

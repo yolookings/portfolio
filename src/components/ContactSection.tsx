@@ -5,7 +5,7 @@ export default function ContactSection() {
     <section id="support" className="min-h-screen py-20">
       <div className="hidden-section max-w-4xl mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl font-bold mb-8">Get In Touch</h2>
-        <p className="text-gray-400 mb-8">
+        <p className="dark:text-gray-400 text-gray-600 mb-8">
           Interested in collaborating? Feel free to contact me.
         </p>
         <div className="container mx-auto mt-20">

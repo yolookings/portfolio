@@ -25,7 +25,7 @@ export default function HeroSection({ isScrolled }: HeroSectionProps) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.8 }}
-          className="text-lg sm:text-xl text-gray-400"
+          className="text-lg sm:text-xl text-gray-600 dark:text-gray-400"
         >
           Full Stack Developer | UI/UX Designer | Software Engineer
         </motion.p>
@@ -47,7 +47,7 @@ export default function HeroSection({ isScrolled }: HeroSectionProps) {
           isScrolled ? "opacity-0" : "opacity-100"
         } transition-opacity duration-300`}
       >
-        <span className="text-gray-400">Scroll Down</span>
+        <span className="dark:text-gray-400 text-gray-600">Scroll Down</span>
       </div>
     </section>
   );
