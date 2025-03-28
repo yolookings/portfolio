@@ -10,9 +10,53 @@ export default function ExperienceSection() {
 
   // Fungsi untuk mengekstrak tahun dari string tanggal
   const extractYear = (dateString: string): number => {
-    if (dateString === "Present") return new Date().getFullYear();
+    if (dateString.toLowerCase() === "present") return new Date().getFullYear();
     const year = dateString.split(" ").pop();
     return year ? parseInt(year) : new Date().getFullYear();
+  };
+
+  // Fungsi untuk mengekstrak bulan dari string tanggal (format "Jan 2023")
+  const extractMonth = (dateString: string): number => {
+    if (dateString.toLowerCase() === "present")
+      return new Date().getMonth() + 1;
+    const monthName = dateString.split(" ")[0];
+    const monthMap: { [key: string]: number } = {
+      Jan: 1,
+      Feb: 2,
+      Mar: 3,
+      Apr: 4,
+      May: 5,
+      Jun: 6,
+      Jul: 7,
+      Aug: 8,
+      Sep: 9,
+      Oct: 10,
+      Nov: 11,
+      Dec: 12,
+    };
+    return monthMap[monthName] || 1; // Default ke Januari jika tidak valid
+  };
+
+  // Mendapatkan durasi pengalaman dalam format yang lebih akurat
+  const getDuration = (startDate: string, endDate: string): string => {
+    const startYear = extractYear(startDate);
+    const startMonth = extractMonth(startDate);
+    const endYear = extractYear(endDate);
+    const endMonth = extractMonth(endDate);
+
+    let totalMonths = (endYear - startYear) * 12 + (endMonth - startMonth);
+    let years = Math.floor(totalMonths / 12);
+    let months = totalMonths % 12;
+
+    if (years > 0 && months > 0) {
+      return `${years} tahun ${months} bulan`;
+    } else if (years > 0) {
+      return `${years} tahun`;
+    } else if (months > 0) {
+      return `${months} bulan`;
+    } else {
+      return "Kurang dari 1 bulan";
+    }
   };
 
   // Mengkonversi jenis pengalaman ke badge warna
@@ -25,26 +69,6 @@ export default function ExperienceSection() {
       Contract: "bg-orange-500",
     };
     return typeColors[type] || "bg-gray-500";
-  };
-
-  // Mendapatkan durasi pengalaman dalam format yang mudah dibaca
-  const getDuration = (startDate: string, endDate: string): string => {
-    const startYear = extractYear(startDate);
-    const endYear =
-      endDate === "Present" ? new Date().getFullYear() : extractYear(endDate);
-
-    const years = endYear - startYear;
-    const months = 0; // Untuk perhitungan yang lebih akurat, butuh informasi bulan yang lebih lengkap
-
-    if (years > 0 && months > 0) {
-      return `${years} tahun ${months} bulan`;
-    } else if (years > 0) {
-      return years === 1 ? "1 year" : `${years} tahun`;
-    } else if (months > 0) {
-      return months === 1 ? "1 month" : `${months} bulan`;
-    } else {
-      return "Less than 1 bulan";
-    }
   };
 
   return (
