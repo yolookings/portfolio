@@ -38,8 +38,7 @@ export const projects = [
       "AMPP ITS is student branch of AMPP international association that focuses on material protection and performance. AMPP ITS SC was established to provide a platform for students to develop knowledge and skills in the field of material protection, one of which is in the field of web development ",
     image: "../img/.png",
     previewLink: "#",
-    projectLink:
-      "https://www.figma.com/design/BUYd4Jk2fz2sm4wkjUsmzp/%F0%9F%96%8C%EF%B8%8F-Futurest-2025----Website-Design?node-id=1261-403&t=qntOy5h1nYr1XHTx-1",
+    projectLink: "#",
     technologies: ["UIX", "Web Development", "Figma"],
     features: [
       "Feature 1: Responsive design with mobile-first approach",
@@ -85,7 +84,8 @@ export const projects = [
       "After joining the association, I now serve as the Secretary of the Media and Information Department for 2025, responsible for managing the organization's social media and overseeing all media-related communications.",
     image: "../img/hmit.png",
     previewLink: "#",
-    projectLink: "https://hmitits.carrd.co/",
+    projectLink:
+      "https://www.figma.com/design/u4l5vxozagaQr5RzoY8rcY/Tuas-Prakarsa-Medfo-Factory?node-id=2956-4&t=YUV1f2FPHVXIFTbG-1",
     technologies: ["Creative Design", "Figma", "Adobe Premiere Pro"],
     features: [
       "Feature 1: create letters for departmental purposes",

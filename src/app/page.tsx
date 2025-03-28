@@ -5,8 +5,10 @@ import NavBar from "@/components/navbar";
 import Footer from "@/components/footer";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
+import Experience from "@/components/ExperienceSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import ContactSection from "@/components/ContactSection";
+import ExperienceSection from "@/components/ExperienceSection";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -43,6 +45,7 @@ export default function Home() {
       <NavBar />
       <HeroSection isScrolled={isScrolled} />
       <AboutSection />
+      <ExperienceSection />
       <ProjectsSection />
       <ContactSection />
       <Footer />
