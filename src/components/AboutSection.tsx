@@ -1,3 +1,74 @@
+import {
+  FaReact,
+  FaVuejs,
+  FaNodeJs,
+  FaDocker,
+  FaFigma,
+  FaAws,
+  FaSwift,
+  FaGitAlt,
+} from "react-icons/fa";
+import {
+  SiNextdotjs,
+  SiNuxtdotjs,
+  SiExpress,
+  SiTailwindcss,
+  SiAdobe,
+} from "react-icons/si";
+
+const categories = [
+  {
+    title: "Frontend",
+    skills: [
+      { name: "React", icon: <FaReact />, link: "https://reactjs.org/" },
+      { name: "Vue.js", icon: <FaVuejs />, link: "https://vuejs.org/" },
+      { name: "Next.js", icon: <SiNextdotjs />, link: "https://nextjs.org/" },
+      { name: "Nuxt.js", icon: <SiNuxtdotjs />, link: "https://nuxt.com/" },
+      {
+        name: "Tailwind CSS",
+        icon: <SiTailwindcss />,
+        link: "https://tailwindcss.com/",
+      },
+    ],
+  },
+  {
+    title: "Backend",
+    skills: [
+      { name: "Node.js", icon: <FaNodeJs />, link: "https://nodejs.org/" },
+      {
+        name: "Express.js",
+        icon: <SiExpress />,
+        link: "https://expressjs.com/",
+      },
+    ],
+  },
+  {
+    title: "Tools",
+    skills: [
+      { name: "Git", icon: <FaGitAlt />, link: "https://git-scm.com/" },
+      { name: "Docker", icon: <FaDocker />, link: "https://www.docker.com/" },
+      { name: "AWS", icon: <FaAws />, link: "https://aws.amazon.com/" },
+    ],
+  },
+  {
+    title: "Design and Editing",
+    skills: [
+      { name: "Figma", icon: <FaFigma />, link: "https://www.figma.com/" },
+      { name: "Adobe", icon: <SiAdobe />, link: "https://www.adobe.com/" },
+    ],
+  },
+  {
+    title: "Mobile Development",
+    skills: [
+      {
+        name: "Swift",
+        icon: <FaSwift />,
+        link: "https://developer.apple.com/swift/",
+      },
+    ],
+  },
+];
+
 export default function AboutSection() {
   return (
     <section
@@ -5,37 +76,48 @@ export default function AboutSection() {
       className="min-h-screen py-10 md:py-20 bg-white dark:bg-gray-900 px-4 sm:px-6 lg:px-8"
     >
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-gray-900 dark:text-white">
+        {/* Judul About Me */}
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 md:mb-12 text-gray-900 dark:text-white text-center relative">
           About Me
+          <span className="block w-24 h-1 bg-blue-500 dark:bg-blue-400 mx-auto mt-2 rounded-full"></span>
         </h2>
-        <p className="text-gray-600 dark:text-gray-400 mb-6 sm:mb-8 text-justify text-sm sm:text-base">
+
+        {/* Paragraf Penjelasan */}
+        <p className="text-gray-600 dark:text-gray-400 mb-10 text-center text-sm sm:text-base max-w-2xl mx-auto">
           I am an Information Technology major with a deep interest in web
-          development and user interface design (UI/UX). With more than a year
-          of experience in designing and developing digital solutions, I have
-          focused on creating interactive and responsive websites.
+          development and UI/UX design. With more than a year of experience, I
+          specialize in crafting **interactive and responsive websites** that
+          enhance user experiences.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-          {[
-            {
-              title: "Frontend",
-              content: "Vue js, React, Next.js, Nuxt, Tailwind CSS",
-            },
-            { title: "Backend", content: "Node.js, Express" },
-            { title: "Tools", content: "Git, Docker, AWS" },
-            { title: "Software", content: "Figma, Adobe Premiere Pro" },
-            { title: "Mobile Development", content: "Swift" },
-          ].map((item, index) => (
+        {/* Grid Kategori Teknologi */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {categories.map((category, index) => (
             <div
               key={index}
-              className="bg-gray-100 dark:bg-gray-800 p-4 sm:p-6 rounded-lg transition-all hover:scale-[1.02] hover:shadow-md"
+              className="bg-gray-100 dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all"
             >
-              <h3 className="text-lg sm:text-xl font-bold mb-2 text-gray-800 dark:text-white">
-                {item.title}
+              <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4 text-center">
+                {category.title}
               </h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base">
-                {item.content}
-              </p>
+              <div className="grid grid-cols-2 gap-4">
+                {category.skills.map((skill, idx) => (
+                  <a
+                    key={idx}
+                    href={skill.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col items-center justify-center p-3 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md transition-all"
+                  >
+                    <div className="text-3xl text-blue-500 dark:text-blue-400 mb-1">
+                      {skill.icon}
+                    </div>
+                    <span className="text-sm text-gray-700 dark:text-gray-300">
+                      {skill.name}
+                    </span>
+                  </a>
+                ))}
+              </div>
             </div>
           ))}
         </div>

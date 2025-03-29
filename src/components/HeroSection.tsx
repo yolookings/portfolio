@@ -10,14 +10,28 @@ export default function HeroSection({ isScrolled }: HeroSectionProps) {
   return (
     <section
       id="home"
-      className="h-screen flex items-center justify-center relative"
+      className="h-screen flex items-center justify-center relative overflow-hidden"
     >
-      <div className="text-center">
+      {/* Video Background */}
+      <video
+        className="absolute top-0 left-0 w-full h-full object-cover"
+        src="../img/space.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
+
+      {/* Overlay agar teks tetap terbaca */}
+      <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50"></div>
+
+      {/* Konten Hero Section */}
+      <div className="relative text-center z-10">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4"
+          className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-white"
         >
           Maulana Ahmad Zahiri
         </motion.h1>
@@ -25,29 +39,19 @@ export default function HeroSection({ isScrolled }: HeroSectionProps) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.8 }}
-          className="text-lg sm:text-xl text-gray-600 dark:text-gray-400"
+          className="text-lg sm:text-xl text-gray-300"
         >
           Full Stack Developer | UI/UX Designer | Software Engineer
         </motion.p>
-        <div>
-          <RotatingIcon
-            className="top-1/3 left-0"
-            size="w-16 h-16 sm:w-18 sm:h-18 md:w-28 md:h-28 lg:w-40 lg:h-40"
-            direction="clockwise"
-          />
-          <RotatingIcon
-            className="top-1/5 left-0"
-            size="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20"
-            direction="counterclockwise"
-          />
-        </div>
       </div>
+
+      {/* Animasi Scroll Down */}
       <div
         className={`absolute bottom-10 animate-bounce ${
           isScrolled ? "opacity-0" : "opacity-100"
-        } transition-opacity duration-300`}
+        } transition-opacity duration-300 z-10`}
       >
-        <span className="dark:text-gray-400 text-gray-600">Scroll Down</span>
+        <span className="text-gray-300">Scroll Down</span>
       </div>
     </section>
   );
