@@ -36,7 +36,7 @@ export const projects = [
     title: "AMPP SC ITS 2025 - UIX Web Development",
     description:
       "AMPP ITS is student branch of AMPP international association that focuses on material protection and performance. AMPP ITS SC was established to provide a platform for students to develop knowledge and skills in the field of material protection, one of which is in the field of web development ",
-    image: "../img/.png",
+    image: "../img/banner-ampp.png",
     previewLink: "#",
     projectLink: "#",
     technologies: ["UIX", "Web Development", "Figma"],

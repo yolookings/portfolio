@@ -119,7 +119,8 @@ export const experienceData: OrganizationExperience[] = [
     ],
   },
   {
-    organization: "Future Energy Summit - Event by SRE ITS",
+    organization:
+      "Future Energy Summit - Event by Society of Renewable Energy ITS",
     logo: "../img/logo-futurest.png",
     experiences: [
       {

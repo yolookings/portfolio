@@ -1,73 +1,4 @@
-import {
-  FaReact,
-  FaVuejs,
-  FaNodeJs,
-  FaDocker,
-  FaFigma,
-  FaAws,
-  FaSwift,
-  FaGitAlt,
-} from "react-icons/fa";
-import {
-  SiNextdotjs,
-  SiNuxtdotjs,
-  SiExpress,
-  SiTailwindcss,
-  SiAdobe,
-} from "react-icons/si";
-
-const categories = [
-  {
-    title: "Frontend",
-    skills: [
-      { name: "React", icon: <FaReact />, link: "https://reactjs.org/" },
-      { name: "Vue.js", icon: <FaVuejs />, link: "https://vuejs.org/" },
-      { name: "Next.js", icon: <SiNextdotjs />, link: "https://nextjs.org/" },
-      { name: "Nuxt.js", icon: <SiNuxtdotjs />, link: "https://nuxt.com/" },
-      {
-        name: "Tailwind CSS",
-        icon: <SiTailwindcss />,
-        link: "https://tailwindcss.com/",
-      },
-    ],
-  },
-  {
-    title: "Backend",
-    skills: [
-      { name: "Node.js", icon: <FaNodeJs />, link: "https://nodejs.org/" },
-      {
-        name: "Express.js",
-        icon: <SiExpress />,
-        link: "https://expressjs.com/",
-      },
-    ],
-  },
-  {
-    title: "Tools",
-    skills: [
-      { name: "Git", icon: <FaGitAlt />, link: "https://git-scm.com/" },
-      { name: "Docker", icon: <FaDocker />, link: "https://www.docker.com/" },
-      { name: "AWS", icon: <FaAws />, link: "https://aws.amazon.com/" },
-    ],
-  },
-  {
-    title: "Design and Editing",
-    skills: [
-      { name: "Figma", icon: <FaFigma />, link: "https://www.figma.com/" },
-      { name: "Adobe", icon: <SiAdobe />, link: "https://www.adobe.com/" },
-    ],
-  },
-  {
-    title: "Mobile Development",
-    skills: [
-      {
-        name: "Swift",
-        icon: <FaSwift />,
-        link: "https://developer.apple.com/swift/",
-      },
-    ],
-  },
-];
+import { categories } from "@/data/aboutData"; // Pastikan path sesuai dengan struktur proyek
 
 export default function AboutSection() {
   return (
@@ -86,8 +17,9 @@ export default function AboutSection() {
         <p className="text-gray-600 dark:text-gray-400 mb-10 text-center text-sm sm:text-base max-w-2xl mx-auto">
           I am an Information Technology major with a deep interest in web
           development and UI/UX design. With more than a year of experience, I
-          specialize in crafting **interactive and responsive websites** that
-          enhance user experiences.
+          specialize in crafting{" "}
+          <strong>interactive and responsive websites</strong> that enhance user
+          experiences.
         </p>
 
         {/* Grid Kategori Teknologi */}
@@ -95,7 +27,7 @@ export default function AboutSection() {
           {categories.map((category, index) => (
             <div
               key={index}
-              className="bg-gray-100 dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all"
+              className="bg-gray-100 dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl dark:hover:shadow-purple-500/40 transition-all"
             >
               <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4 text-center">
                 {category.title}

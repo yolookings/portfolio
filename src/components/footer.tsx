@@ -1,5 +1,5 @@
 import React from "react";
-import { Github, Instagram, Linkedin, Mail } from "lucide-react";
+import { Github, Instagram, Linkedin, Mail, Youtube } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Footer = () => {
@@ -25,6 +25,11 @@ const Footer = () => {
       name: "Instagram",
       icon: <Instagram className="w-5 h-5" />,
       href: "https://instagram.com/maulanazahiri",
+    },
+    {
+      name: "Youtube",
+      icon: <Youtube className="w-5 h-5" />,
+      href: "https://youtube.com/@yolookings",
     },
   ];
 

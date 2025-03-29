@@ -15,7 +15,7 @@ const ExpandableProjectCard = ({ project }: { project: Project }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden project-card hover:shadow-md">
+    <div className="bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden project-card hover:shadow-2xl dark:hover:shadow-yellow-500/40 ">
       <div className="h-48 bg-gray-200 dark:bg-gray-700">
         <img
           src={project.image}

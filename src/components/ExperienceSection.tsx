@@ -49,13 +49,15 @@ export default function ExperienceSection() {
     let months = totalMonths % 12;
 
     if (years > 0 && months > 0) {
-      return `${years} tahun ${months} bulan`;
+      return `${years} Year${years > 1 ? "s" : ""} ${months} Month${
+        months > 1 ? "s" : ""
+      }`;
     } else if (years > 0) {
-      return `${years} tahun`;
+      return `${years} Year${years > 1 ? "s" : ""}`;
     } else if (months > 0) {
-      return `${months} bulan`;
+      return `${months} Month${months > 1 ? "s" : ""}`;
     } else {
-      return "Kurang dari 1 bulan";
+      return "Less than 1 Month";
     }
   };
 
