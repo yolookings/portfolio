@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { Moon, Sun, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Home, Info, Briefcase, Folder, Mail } from "lucide-react";
 
 const Navbar = () => {
   const { theme, setTheme } = useTheme();
@@ -15,11 +16,23 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { href: "#home", label: "Home" },
-    { href: "#about", label: "About" },
-    { href: "#experience", label: "Experience" },
-    { href: "#projects", label: "Projects" },
-    { href: "#support", label: "Contact" },
+    { href: "#home", label: "Home", icon: <Home className="w-5 h-5 mr-2" /> },
+    { href: "#about", label: "About", icon: <Info className="w-5 h-5 mr-2" /> },
+    {
+      href: "#experience",
+      label: "Experience",
+      icon: <Briefcase className="w-5 h-5 mr-2" />,
+    },
+    {
+      href: "#projects",
+      label: "Projects",
+      icon: <Folder className="w-5 h-5 mr-2" />,
+    },
+    {
+      href: "#support",
+      label: "Contact",
+      icon: <Mail className="w-5 h-5 mr-2" />,
+    },
   ];
 
   const scrollToSection = (sectionId: string) => {
@@ -68,8 +81,13 @@ const Navbar = () => {
               <button
                 key={link.href}
                 onClick={() => scrollToSection(link.href)}
-                className="relative text-gray-700 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400 transition-colors max-md:hidden after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-purple-600 dark:after:bg-purple-400 after:transition-all after:duration-300 hover:after:w-full"
+                className="relative flex items-center text-gray-700 dark:text-gray-200 
+    hover:text-purple-600 dark:hover:text-purple-400 transition-colors 
+    max-md:hidden after:content-[''] after:absolute after:left-0 after:bottom-0 
+    after:w-0 after:h-[2px] after:bg-purple-600 dark:after:bg-purple-400 
+    after:transition-all after:duration-300 hover:after:w-full"
               >
+                {link.icon} {/* Ikon dari Lucide-React */}
                 {link.label}
               </button>
             ))}
@@ -132,7 +150,7 @@ const Navbar = () => {
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1 * navLinks.indexOf(link) }}
-                    className="relative text-gray-800 dark:text-gray-100 
+                    className="relative flex items-center text-gray-800 dark:text-gray-100 
                     text-lg font-medium
                     hover:text-purple-600 dark:hover:text-purple-400 
                     transition-all 
@@ -142,6 +160,7 @@ const Navbar = () => {
                     after:transition-all after:duration-300 
                     hover:after:w-full"
                   >
+                    {link.icon} {/* Ikon dari Lucide-React */}
                     {link.label}
                   </motion.button>
                 ))}

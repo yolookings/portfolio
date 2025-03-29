@@ -102,4 +102,36 @@ export const experienceData: OrganizationExperience[] = [
       },
     ],
   },
+  {
+    organization: "AMPP Institut Teknologi Sepuluh Nopember Student Chapter",
+    logo: "../img/ampp.png",
+    experiences: [
+      {
+        title: "Staff of Web Development - Media and Branding",
+        type: "Seasonal",
+        startDate: "Mar 2025",
+        endDate: "Present",
+        location: "Surabaya, Jawa Timur, Indonesia",
+        description:
+          "AMPP ITS is a student branch of the AMPP international association that focuses on material protection and performance. AMPP ITS SC was established to provide a platform for students to develop knowledge and skills in the field of material protection, one of which is in the field of web development.",
+        skills: ["Web Development", "Media Branding", "Material Protection"],
+      },
+    ],
+  },
+  {
+    organization: "Future Energy Summit - Event by SRE ITS",
+    logo: "../img/logo-futurest.png",
+    experiences: [
+      {
+        title: "UI/UX Designer - Web Development",
+        type: "Seasonal",
+        startDate: "Nov 2024",
+        endDate: "Present",
+        location: "Surabaya, Jawa Timur, Indonesia",
+        description:
+          "Futurest is an event organized by SRE ITS that hosts various competitions to support the transition to renewable energy. I am registered as a UI/UX Designer staff, responsible for designing user interface elements for the Futurest website.",
+        skills: ["UI/UX Design", "Web Development", "Web Design"],
+      },
+    ],
+  },
 ];
