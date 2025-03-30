@@ -88,7 +88,7 @@ export const categories = [
     ],
   },
   {
-    title: "Mobile Development",
+    title: "Software Development",
     skills: [
       {
         name: "Swift",

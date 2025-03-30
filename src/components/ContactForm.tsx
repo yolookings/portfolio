@@ -132,29 +132,21 @@ const ContactForm = () => {
 
       const formDataToSend = new FormData();
       formDataToSend.append("pdf", file);
+      formDataToSend.append("email", formData.email);
 
-      const response = await fetch("/api/save-pdf", {
+      const response = await fetch("/api/contact", {
         method: "POST",
         body: formDataToSend,
       });
 
       if (!response.ok) {
-        throw new Error("Failed to save PDF");
+        throw new Error("Failed to send email");
       }
-
-      const result = await response.json();
-      console.log("PDF saved successfully:", result.path);
-
-      setFormData({
-        name: "",
-        email: "",
-        message: "",
-      });
 
       showAlert("Message sent successfully!", "success");
     } catch (error) {
       console.error("Error:", error);
-      showAlert("Failed to save PDF. Please try again.", "warning");
+      showAlert("Failed to send email. Please try again.", "warning");
     } finally {
       setIsSubmitting(false);
     }
