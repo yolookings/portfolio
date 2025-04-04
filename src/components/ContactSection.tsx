@@ -11,12 +11,12 @@ export default function ContactSection() {
         <p className="dark:text-gray-400 text-gray-600 mb-8">
           Interested in collaborating? Feel free to contact me.
         </p>
-        <div className="container mx-auto mt-20">
-          <h1 className="text-2xl font-bold mb-6 text-center"></h1>
+        <div className="container mx-auto mt-10">
+          <h1 className="text-2xl font-bold text-center"></h1>
           <ContactForm />
         </div>
         <div className="mt-16 flex justify-center">
-          <p className="text-lg text-gray-400 animate-typing">
+          <p className="text-lg dark:text-gray-400 text-gray-600 animate-typing">
             Thanks for your visit! 🚀
           </p>
         </div>

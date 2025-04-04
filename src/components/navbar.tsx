@@ -39,19 +39,15 @@ const Navbar = () => {
     const element = document.getElementById(sectionId.replace("#", ""));
     if (element) {
       const offset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
+      const elementPosition =
+        element.getBoundingClientRect().top + window.pageYOffset - offset;
 
-      // Close mobile menu after navigation{
+      // Close mobile menu first, lalu scroll setelahnya
       setIsMobileMenuOpen(false);
 
-      requestAnimationFrame(() => {
+      setTimeout(() => {
         window.scrollTo({
-          top: offsetPosition,
+          top: elementPosition,
           behavior: "smooth",
         });
       });

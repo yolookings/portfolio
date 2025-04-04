@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import RotatingIcon from "../data/icon";
+import { CldVideoPlayer } from "next-cloudinary";
 
 interface HeroSectionProps {
   isScrolled: boolean;
