@@ -108,7 +108,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-gray-200 dark:border-gray-800 mt-8 pt-8 text-center">
+        <div className="border-t border-gray-200 dark:border-gray-800 mt-8 pb-8 pt-8 text-center">
           <p className="text-gray-600 dark:text-gray-400">
             © {currentYear} MAW. All rights reserved.
           </p>

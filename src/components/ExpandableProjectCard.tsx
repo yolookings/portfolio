@@ -62,7 +62,13 @@ const ExpandableProjectCard = ({ project }: { project: Project }) => {
                   <p className="text-justify">{project.description}</p>
 
                   <div className="space-y-2">
-                    <h4 className="font-semibold text-gray-900 dark:text-white">
+                    <h4
+                      className="font-semibold text-gray-900 dark:text-white"
+                      data-aos="fade-in"
+                      data-aos-delay="200"
+                      data-aos-duration="600"
+                      data-aos-easing="ease-in-out"
+                    >
                       Technologies Used:
                     </h4>
                     <div className="flex flex-wrap gap-2">
@@ -70,6 +76,10 @@ const ExpandableProjectCard = ({ project }: { project: Project }) => {
                         (tech: string, index: number) => (
                           <span
                             key={index}
+                            data-aos="zoom-in"
+                            data-aos-delay={index * 100}
+                            data-aos-duration="600"
+                            data-aos-easing="ease-in-out"
                             className="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full text-sm text-gray-800 dark:text-gray-200"
                           >
                             {tech}
@@ -81,7 +91,13 @@ const ExpandableProjectCard = ({ project }: { project: Project }) => {
 
                   {project.features && (
                     <div className="space-y-2">
-                      <h4 className="font-semibold text-gray-900 dark:text-white">
+                      <h4
+                        className="font-semibold text-gray-900 dark:text-white"
+                        data-aos="fade-in"
+                        data-aos-delay="250"
+                        data-aos-duration="600"
+                        data-aos-easing="ease-in-out"
+                      >
                         Key Features:
                       </h4>
                       <ul className="list-disc list-inside space-y-1">
@@ -90,6 +106,10 @@ const ExpandableProjectCard = ({ project }: { project: Project }) => {
                             <li
                               key={index}
                               className="text-gray-600 dark:text-gray-400"
+                              data-aos="fade-in"
+                              data-aos-delay={index * 200}
+                              data-aos-duration="600"
+                              data-aos-easing="ease-in-out"
                             >
                               {feature}
                             </li>

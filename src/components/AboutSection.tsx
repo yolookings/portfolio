@@ -5,17 +5,24 @@ export default function AboutSection() {
     <section
       id="about"
       className="min-h-screen py-10 md:py-20 bg-white dark:bg-gray-900 px-4 sm:px-6 lg:px-8"
-      data-aos="fade-up"
     >
       <div className="max-w-6xl mx-auto">
         {/* Judul About Me */}
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 md:mb-12 text-gray-900 dark:text-white text-center relative">
+        <h2
+          className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 md:mb-12 text-gray-900 dark:text-white text-center relative"
+          data-aos="fade-up"
+          data-aos-duration="700"
+        >
           About Me
           <span className="block w-24 h-1 bg-blue-500 dark:bg-blue-400 mx-auto mt-2 rounded-full"></span>
         </h2>
 
         {/* Paragraf Penjelasan */}
-        <p className="text-gray-600 dark:text-gray-400 mb-10 text-center text-sm sm:text-base max-w-2xl mx-auto">
+        <p
+          className="text-gray-600 dark:text-gray-400 mb-10 text-center text-sm sm:text-base max-w-2xl mx-auto"
+          data-aos="fade-up"
+          data-aos-duration="700"
+        >
           I am an Information Technology major with a deep interest in web
           development and UI/UX design. With more than a year of experience, I
           specialize in crafting{" "}
@@ -28,6 +35,10 @@ export default function AboutSection() {
           {categories.map((category, index) => (
             <div
               key={index}
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+              data-aos-duration="600"
+              data-aos-easing="ease-in-out"
               className="bg-gray-100 dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl dark:hover:shadow-purple-500/40 transition-all"
             >
               <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4 text-center">
@@ -37,6 +48,10 @@ export default function AboutSection() {
                 {category.skills.map((skill, idx) => (
                   <a
                     key={idx}
+                    data-aos="fade-up"
+                    data-aos-delay={idx * 100}
+                    data-aos-duration="600"
+                    data-aos-easing="ease-in-out"
                     href={skill.link}
                     target="_blank"
                     rel="noopener noreferrer"

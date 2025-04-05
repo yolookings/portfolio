@@ -79,16 +79,21 @@ export default function ExperienceSection() {
       className="min-h-screen py-12 md:py-20 bg-white dark:bg-gray-900 px-4 sm:px-6 lg:px-8"
     >
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 md:mb-12 text-gray-900 dark:text-white text-center relative">
+        <h2
+          className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 md:mb-12 text-gray-900 dark:text-white text-center relative"
+          data-aos="fade-up"
+        >
           Experience
           <span className="block w-24 h-1 bg-blue-500 dark:bg-blue-400 mx-auto mt-2 rounded-full"></span>
         </h2>
 
-        <div className="space-y-10">
+        <div className="space-y-10" data-aos="fade-down">
           {experienceData.map((org, orgIndex) => (
             <div
               key={orgIndex}
               className="border-b border-gray-200 dark:border-gray-700 pb-10 last:border-b-0 last:pb-0"
+              data-aos="fade-up"
+              data-aos-delay={orgIndex * 100}
             >
               {/* Organization header */}
               <div
@@ -114,7 +119,12 @@ export default function ExperienceSection() {
               {/* Experience entries */}
               <div className="pl-6 ml-6 space-y-8 border-l-2 border-gray-200 dark:border-gray-700">
                 {org.experiences.map((exp, expIndex) => (
-                  <div key={expIndex} className="relative">
+                  <div
+                    key={expIndex}
+                    className="relative"
+                    data-aos="fade-up"
+                    data-aos-delay={expIndex * 100}
+                  >
                     {/* Timeline node aligned with title */}
                     <div className="absolute w-4 h-4 rounded-full bg-white dark:bg-gray-800 border-2 border-blue-500 dark:border-blue-400 -left-[20px] top-1.5"></div>
 
@@ -174,6 +184,8 @@ export default function ExperienceSection() {
                           <span
                             key={skillIndex}
                             className="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-2.5 py-1 text-xs rounded-full border border-gray-200 dark:border-gray-700"
+                            data-aos="zoom-in"
+                            data-aos-delay={skillIndex * 100}
                           >
                             {skill}
                           </span>
