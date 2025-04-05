@@ -5,6 +5,7 @@ export default function AboutSection() {
     <section
       id="about"
       className="min-h-screen py-10 md:py-20 bg-white dark:bg-gray-900 px-4 sm:px-6 lg:px-8"
+      data-aos="fade-up"
     >
       <div className="max-w-6xl mx-auto">
         {/* Judul About Me */}

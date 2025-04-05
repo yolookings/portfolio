@@ -1,41 +1,33 @@
 "use client";
+
 import { useState, useEffect } from "react";
-import "../styles/globals.css";
 import NavBar from "@/components/navbar";
 import Footer from "@/components/footer";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
-import Experience from "@/components/ExperienceSection";
+import ExperienceSection from "@/components/ExperienceSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import ContactSection from "@/components/ContactSection";
-import ExperienceSection from "@/components/ExperienceSection";
+import "../styles/globals.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-        }
-      });
+    AOS.init({
+      duration: 800,
+      once: true,
     });
-    const hiddenElements = document.querySelectorAll(".hidden-section");
-    hiddenElements.forEach((el) => observer.observe(el));
 
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
 
     return () => {
-      hiddenElements.forEach((el) => observer.unobserve(el));
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
