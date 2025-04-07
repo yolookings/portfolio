@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import RotatingIcon from "../data/icon";
 import { CldVideoPlayer } from "next-cloudinary";
+import { Download } from "lucide-react";
 
 interface HeroSectionProps {
   isScrolled: boolean;
@@ -27,7 +28,7 @@ export default function HeroSection({ isScrolled }: HeroSectionProps) {
       <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50"></div>
 
       {/* Konten Hero Section */}
-      <div className="relative text-center z-10">
+      <div className="relative text-center z-10 px-4">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -40,7 +41,7 @@ export default function HeroSection({ isScrolled }: HeroSectionProps) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.8 }}
-          className="text-lg sm:text-xl text-gray-300"
+          className="text-lg sm:text-xl text-gray-300 mb-6"
         >
           Full Stack Developer | UI/UX Designer | Software Engineer
         </motion.p>

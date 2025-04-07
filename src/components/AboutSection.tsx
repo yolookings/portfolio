@@ -1,4 +1,5 @@
-import { categories } from "@/data/aboutData"; // Pastikan path sesuai dengan struktur proyek
+import { categories } from "@/data/aboutData";
+import { Download } from "lucide-react";
 
 export default function AboutSection() {
   return (
@@ -19,7 +20,7 @@ export default function AboutSection() {
 
         {/* Paragraf Penjelasan */}
         <p
-          className="text-gray-600 dark:text-gray-400 mb-10 text-center text-sm sm:text-base max-w-2xl mx-auto"
+          className="text-gray-600 dark:text-gray-400 mb-4 text-center text-sm sm:text-base max-w-2xl mx-auto"
           data-aos="fade-up"
           data-aos-duration="700"
         >
@@ -69,6 +70,39 @@ export default function AboutSection() {
             </div>
           ))}
         </div>
+      </div>
+
+      {/* Tombol Download CV & Resume */}
+      <div
+        className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6 mb-12"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        {/* Tombol CV */}
+        <a
+          href="/assets/My_CV.pdf"
+          download
+          className="group w-52 sm:w-60 relative inline-flex items-center justify-center px-6 py-3 text-sm sm:text-base font-medium text-blue-600 dark:text-blue-400 bg-white/10 dark:bg-white/5 backdrop-blur-md border border-blue-500/40 dark:border-blue-400/20 rounded-xl overflow-hidden shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300"
+        >
+          <Download
+            size={18}
+            className="mr-2 transition-transform group-hover:rotate-[-15deg]"
+          />
+          Download CV
+        </a>
+
+        {/* Tombol Resume */}
+        <a
+          href="/assets/My_Resume.pdf"
+          download
+          className="group w-52 sm:w-60 relative inline-flex items-center justify-center px-6 py-3 text-sm sm:text-base font-medium text-blue-600 dark:text-blue-400 bg-white/10 dark:bg-white/5 backdrop-blur-md border border-blue-500/40 dark:border-blue-400/20 rounded-xl overflow-hidden shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300"
+        >
+          <Download
+            size={18}
+            className="mr-2 transition-transform group-hover:rotate-[15deg]"
+          />
+          Download Resume
+        </a>
       </div>
     </section>
   );
