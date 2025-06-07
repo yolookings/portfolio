@@ -83,9 +83,18 @@ export default function ExperienceSection() {
           className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 md:mb-12 text-gray-900 dark:text-white text-center relative"
           data-aos="fade-up"
         >
-          Experience
+          My Experience
           <span className="block w-24 h-1 bg-blue-500 dark:bg-blue-400 mx-auto mt-2 rounded-full"></span>
         </h2>
+        <h5
+          className="text-gray-600 dark:text-gray-400 mb-8 text-center text-sm sm:text-base max-w-2xl mx-auto"
+          data-aos="fade-up"
+          data-aos-duration="700"
+        >
+          <strong>
+            "Here are some of my experiences that I have worked on."
+          </strong>
+        </h5>
 
         <div className="space-y-10" data-aos="fade-down">
           {experienceData.map((org, orgIndex) => (
