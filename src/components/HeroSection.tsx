@@ -43,7 +43,7 @@ export default function HeroSection({ isScrolled }: HeroSectionProps) {
           transition={{ delay: 0.5, duration: 0.8 }}
           className="text-lg sm:text-xl text-gray-300 mb-6"
         >
-          Full Stack Developer | UI/UX Designer | Software Engineer
+          Ai Engineer | UI/UX Designer | iOS Developer
         </motion.p>
       </div>
 
