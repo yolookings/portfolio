@@ -48,7 +48,7 @@ const NavLink = memo(
       }}
       className="relative flex items-center text-gray-700 dark:text-gray-200 
       hover:text-purple-600 dark:hover:text-purple-400 transition-colors 
-      max-md:hidden after:content-[''] after:absolute after:left-0 after:bottom-0 
+      max-md:hidden after:content-[''] after:absolute after:left-0 after:-bottom-2
       after:w-0 after:h-[2px] after:bg-purple-600 dark:after:bg-purple-400 
       after:transition-all after:duration-300 hover:after:w-full"
     >
