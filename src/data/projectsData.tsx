@@ -175,4 +175,17 @@ export const projects = [
       "Feature 3: Offering a web-based service to advance technology adoption in the ornamental plant industry.",
     ],
   },
+  {
+    id: 11,
+    title:
+      "CocokGaYa - Application for Understanding Learning Styles and Discovering Student Interests",
+    description:
+      "An app to help students find the right learning style and solutions to determine their career interests in the right field for their future.",
+    image: "../img/cocokgaya.png",
+    previewLink: "#",
+    projectLink:
+      "https://www.figma.com/design/zLGAFQS0YEum3gylDX8wit/IMK-Project---CocokGaYa?node-id=0-1&t=2V5VcbLuvm8vXWBW-1",
+    technologies: ["Figma", "Prototype", "UI/UX"],
+    features: ["None"],
+  },
 ];
